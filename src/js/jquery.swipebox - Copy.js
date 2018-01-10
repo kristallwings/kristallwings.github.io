@@ -357,7 +357,7 @@
 									} );
 								}
 
-							// swipe right
+							// swipe rught
 							} else if ( 0 > hDistance ) {
 
 								// last Slide
@@ -383,8 +383,8 @@
 					event.stopPropagation();
 
 					$( '#swipebox-slider' ).css( {
-						'-webkit-transition' : '-webkit-transform 5s ease',
-						'transition' : 'transform 5s ease'
+						'-webkit-transition' : '-webkit-transform 0.4s ease',
+						'transition' : 'transform 0.4s ease'
 					} );
 
 					vDistance = endCoords.pageY - startCoords.pageY;
@@ -485,18 +485,18 @@
 			/**
 			 * Hide navigation and title bars
 			 */
-			 showBars : function () {
- 				var bars = $( '#swipebox-top-bar, #swipebox-bottom-bar' );
- 				if ( this.doCssTrans() ) {
- 					bars.addClass( 'visible-bars' );
- 				} else {
- 					$( '#swipebox-top-bar' ).animate( { top : 0 }, 500 );
- 					$( '#swipebox-bottom-bar' ).animate( { bottom : 0 }, 500 );
- 					setTimeout( function() {
- 						bars.addClass( 'visible-bars' );
- 					}, 1000 );
- 				}
- 			},
+			hideBars : function () {
+				var bars = $( '#swipebox-top-bar, #swipebox-bottom-bar' );
+				if ( this.doCssTrans() ) {
+					bars.removeClass( 'visible-bars' );
+				} else {
+					$( '#swipebox-top-bar' ).animate( { top : '-50px' }, 500 );
+					$( '#swipebox-bottom-bar' ).animate( { bottom : '-50px' }, 500 );
+					setTimeout( function() {
+						bars.removeClass( 'visible-bars' );
+					}, 1000 );
+				}
+			},
 
 			/**
 			 * Animate navigation and top bars
@@ -520,7 +520,11 @@
 					bars.addClass( 'visible-bars' );
 					$this.clearTimeout();
 
-
+				}, function() {
+					if ( plugin.settings.hideBarsDelay > 0 ) {
+						bars.removeClass( 'visible-bars' );
+						$this.setTimeout();
+					}
 
 				} );
 			},
@@ -744,7 +748,7 @@
 				if ( a.search ) {
 					qs = JSON.parse( '{"' + a.search.toLowerCase().replace('?','').replace(/&/g,'","').replace(/=/g,'":"') + '"}' );
 				}
-
+				
 				// Extend with custom data
 				if ( $.isPlainObject( customData ) ) {
 					qs = $.extend( qs, customData, plugin.settings.queryStringData ); // The dev has always the final word
