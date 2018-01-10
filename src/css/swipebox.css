@@ -127,7 +127,7 @@ html.swipebox-html.swipebox-touch {
 
 #swipebox-prev,
 #swipebox-next,
-#swipebox-close 
+#swipebox-close
 {
   background-image: url(../img/icons.svg);
   background-repeat: no-repeat;
@@ -183,8 +183,8 @@ html.swipebox-html.swipebox-touch {
 }
 
 .swipebox-touch #swipebox-container:before, .swipebox-touch #swipebox-container:after {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
   -webkit-transition: all .3s ease;
           transition: all .3s ease;
   content: ' ';
@@ -275,23 +275,22 @@ html.swipebox-html.swipebox-touch {
     max-width: 800px;
   }
 }
-/* Skin 
+/* Skin
 --------------------------*/
 #swipebox-overlay {
-  background:rgba(0,0,0,.9) !important;
+  background:rgba(0,0,0,.8) !important;
 }
 
 #swipebox-bottom-bar,
 #swipebox-top-bar {
-  text-shadow: 1px 1px 1px black;
   background: black;
   opacity: 0.92;
 }
 
 #swipebox-top-bar {
-color: snow !important;
+color: white !important;
 font-family: 'Lato', HelveticaNeue-Light, sans-serif !important;
-  font-size: 16px;
-font-weight: 100;
-  line-height: 46px;
+  font-size: 20px;
+font-weight: 400;
+line-height: 46px;
 }
