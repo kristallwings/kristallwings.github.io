@@ -1,6 +1,6 @@
 body
 {
-color: white !important;
+color: black;
 font-family: 'Lato', HelveticaNeue-Light, sans-serif !important;
 text-rendering: auto;
 text-rendering: optimizeSpeed;
@@ -10,7 +10,7 @@ font-weight:500;
 padding: 0px;
 margin: 0px;
 z-index: 0;
-background-color: #0c0c0e !important;
+background-color: whitesmoke;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
@@ -30,13 +30,13 @@ background-color: #0c0c0e !important;
 		div.canvas-content{
 			position:relative;
 			z-index: 1;
-			color:white;
+			color:black;
 			text-align:center;
 			padding-top:30px;
 		}
 a
 {
-color: white !important;
+color: black;
 display: block;
 font-size:13px !important;
 font-weight:400 !important;
@@ -107,7 +107,7 @@ background:whitesmoke;
 }
 .container:nth-child(odd)
 {
-background: pink
+background: whitesmoke;
 }
 #box-container
 {
@@ -320,5 +320,5 @@ margin-left: 41%;
 }
 
 #sub-frame-error{
-background-color: black !important;
+background-color: whitesmoke;
 }
