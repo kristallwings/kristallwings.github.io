@@ -1,6 +1,6 @@
 body
 {
-color: black;
+color: white !important;
 font-family: 'Lato', HelveticaNeue-Light, sans-serif !important;
 text-rendering: auto;
 text-rendering: optimizeSpeed;
@@ -10,7 +10,7 @@ font-weight:500;
 padding: 0px;
 margin: 0px;
 z-index: 0;
-background-color: whitesmoke;
+background-color: #0c0c0e !important;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
@@ -30,13 +30,13 @@ background-color: whitesmoke;
 		div.canvas-content{
 			position:relative;
 			z-index: 1;
-			color:black;
+			color:white;
 			text-align:center;
 			padding-top:30px;
 		}
 a
 {
-color: black;
+color: white !important;
 display: block;
 font-size:13px !important;
 font-weight:400 !important;
@@ -103,11 +103,11 @@ margin-left:1em
 }
 .container:nth-child(even)
 {
-background:whitesmoke;
+background:#080809;
 }
 .container:nth-child(odd)
 {
-background: whitesmoke;
+background: pink
 }
 #box-container
 {
@@ -320,5 +320,5 @@ margin-left: 41%;
 }
 
 #sub-frame-error{
-background-color: whitesmoke;
+background-color: black !important;
 }
