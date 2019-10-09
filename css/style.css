@@ -103,7 +103,7 @@ margin-left:1em
 }
 .container:nth-child(even)
 {
-background:#080809;
+background:whitesmoke;
 }
 .container:nth-child(odd)
 {
